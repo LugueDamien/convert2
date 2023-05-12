@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>converter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #333, #999);
+    }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<center>
+<body>
+    <div class="container my-5">
+        <h1>Convert minutes to hour/s or vice versa!</h1>
+        <p>Put your value in the input box and press convert to see it in hours or minutes!</p>
+    </div>
+    <h1>converter minutes to hour</h1>
+    <input type="text" id="id1">
+    <button onclick="convertToMinutesHours()">convert</button>
+    <p id="hour"></p>
+    <br>
+    <h1>converter hour to minute</h1>
+    <input type="text" id="id2">
+    <button onclick="convertToHoursMinutes()">convert</button>
+    <p id="minute"></p>
+
+
+    <script>
+        function convertToMinutesHours() {
+            var x = document.getElementById('id1').value
+            var value = x / 60
+            document.getElementById('hour').innerHTML =  value + " hour/s"
+        }
+        function convertToHoursMinutes() {
+            var x = document.getElementById('id2').value
+            var value = x * 60
+            document.getElementById('minute').innerHTML =  value + " minute/s"
+        }
+    </script>
+</body>
+</center>
+</html> 
